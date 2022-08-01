@@ -4,7 +4,6 @@
     display: grid;
     grid-template-columns: repeat(3, minmax(275px, 1fr));
     column-gap: 50px;
-    padding-top: 90px;
   }
   &-item {
     padding: 40px 20px;

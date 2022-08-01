@@ -78,6 +78,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-bottom: 80px;
   &-caption {
     text-transform: uppercase;
     margin-bottom: 40px;
@@ -126,4 +127,7 @@ body {
   font-weight: 300;
   color: $gray-text;
   line-height: 1.6;
+}
+.logo {
+  display: inline-block;
 }

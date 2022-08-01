@@ -88,6 +88,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-bottom: 80px;
 }
 .block-caption {
   text-transform: uppercase;
@@ -138,6 +139,10 @@ body {
   line-height: 1.6;
 }
 
+.logo {
+  display: inline-block;
+}
+
 .banner {
   display: flex;
   align-items: center;
@@ -171,12 +176,11 @@ body {
   display: flex;
   align-items: center;
 }
+.header .logo {
+  margin-right: 120px;
+}
 .header-auth {
   margin-left: auto;
-}
-.header-logo {
-  margin-right: 120px;
-  display: block;
 }
 .header-menu {
   display: flex;
@@ -202,7 +206,6 @@ body {
   display: grid;
   grid-template-columns: repeat(3, minmax(275px, 1fr));
   column-gap: 50px;
-  padding-top: 90px;
 }
 .work-item {
   padding: 40px 20px;
@@ -281,7 +284,6 @@ body {
   list-style: none;
   display: flex;
   justify-content: space-between;
-  padding-top: 75px;
 }
 .plan-item {
   padding: 70px 30px;
@@ -365,9 +367,11 @@ body {
   transition: all 0.2s linear;
 }
 
+.client {
+  padding-bottom: 100px;
+}
 .client-list {
   display: flex;
-  padding-top: 80px;
 }
 .client-item {
   padding: 45px 20px;
@@ -434,6 +438,61 @@ body {
   margin: 0 5px;
   font-size: 20px;
   color: #ffcb46;
+}
+
+.started {
+  max-width: 900px;
+  margin: 100px auto 50px;
+  border-radius: 20px;
+  background-color: #fbfbfb;
+  padding: 60px 30px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.started-caption {
+  margin-bottom: 20px;
+}
+.started-heading {
+  margin-bottom: 30px;
+}
+.started-desc {
+  margin-bottom: 50px;
+}
+.started-comment {
+  position: absolute;
+  left: 30px;
+  bottom: 0;
+}
+.started-smile {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-column-gap: 20px;
+}
+.footer-heading {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.footer-links {
+  list-style: none;
+}
+.footer-link-item {
+  margin-bottom: 30px;
+}
+.footer-link {
+  color: #272e35;
+  font-size: 14px;
 }
 
 /*# sourceMappingURL=style.css.map */
