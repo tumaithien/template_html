@@ -1,0 +1,72 @@
+.client {
+  &-list {
+    display: flex;
+    padding-top: 80px;
+  }
+  &-item {
+    padding: 45px 20px;
+    border: 1px solid $gray-border;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    flex: 1;
+  }
+  &-item:not(:first-child) {
+    margin-left: 70px;
+  }
+  &-item:hover {
+    border-color: transparent;
+    box-shadow: 0 0 20px 2px rgba($color: #000000, $alpha: 0.03);
+  }
+  &-info {
+    margin-bottom: 25px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid $gray-border;
+    width: 100%;
+  }
+  &-avatar {
+    height: 125px;
+    width: 125px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 25px;
+  }
+  &-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &-name {
+    font-weight: 500;
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+  &-position {
+    display: block;
+    font-weight: 500;
+    font-size: 14px;
+  }
+  &-review {
+    line-height: 1.7;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    margin-bottom: 30px;
+  }
+  &-rate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    i {
+      margin: 0 5px;
+      font-size: 20px;
+      color: $yellow;
+    }
+  }
+}

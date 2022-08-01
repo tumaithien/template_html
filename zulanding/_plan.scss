@@ -1,0 +1,90 @@
+.plan {
+  padding-bottom: 100px;
+  &-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 75px;
+  }
+  &-item {
+    padding: 70px 30px;
+    border: 1px solid $gray-border;
+    border-radius: 15px;
+    width: calc(33.33% - 30px);
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    transition: all 0.2s linear;
+    position: relative;
+  }
+  &-label {
+    position: absolute;
+    padding: 20px 25px;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: $red-light;
+    color: white;
+    top: 0;
+    right: 0;
+  }
+  &-item:hover {
+    border-color: transparent;
+    box-shadow: 0 0 20px 2px rgba($color: #000000, $alpha: 0.03);
+  }
+  &-item:hover .plan-start {
+    border-color: $primary;
+    background-color: $primary;
+    color: white;
+  }
+  &-item:hover .plan-label {
+    box-shadow: 7px -5px 20px 2px rgb(0 0 0 / 3%);
+  }
+  &-name {
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 35px;
+  }
+  &-price {
+    padding-bottom: 40px;
+    border-bottom: 1px solid $gray-border;
+    margin-bottom: 35px;
+  }
+  &-symbol {
+    vertical-align: top;
+  }
+  &-month {
+    font-size: 50px;
+    font-weight: 500;
+  }
+  &-desc {
+    margin-bottom: 60px;
+  }
+  &-feature {
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 35px;
+  }
+  &-feature-item {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+  }
+  &-feature-item:last-of-type {
+    margin-bottom: 75px;
+  }
+  &-feature-icon {
+    color: $gray-light;
+    font-size: 20px;
+  }
+  &-feature-title {
+    display: inline-block;
+    margin-left: 10px;
+    font-weight: 400;
+  }
+  &-start {
+    display: block;
+    margin: auto auto 0;
+    width: max-content;
+    transition: all 0.2s linear;
+  }
+}
