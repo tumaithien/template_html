@@ -1,0 +1,125 @@
+.story {
+  padding: 10rem 0;
+  @include bg(white);
+  &-list {
+    @include flexbox(stretch, space-between);
+  }
+  &-item {
+    width: calc(33.33% - 2rem);
+  }
+  &-img {
+    @include size(100%, 24rem);
+    object-fit: cover;
+  }
+  &-media {
+    position: relative;
+    margin-bottom: 2rem;
+  }
+  &-date {
+    @include bg($third-color);
+    padding: 1.5rem 2rem;
+    @include flexbox(center, center, column);
+    color: white;
+    position: absolute;
+    bottom: 1rem;
+    transform: translateX(-1rem);
+    z-index: 2;
+  }
+  &-date-number {
+    font-weight: bold;
+    font-size: 3rem;
+  }
+  &-title {
+    text-transform: uppercase;
+    @include textClamp(1);
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    & > a {
+      color: $title-color;
+    }
+  }
+  &-desc {
+    line-height: 1.6;
+    color: $text-color;
+    @include textClamp(2);
+    // padding-bottom: 1.6rem;
+    margin-bottom: 1.6rem;
+    position: relative;
+  }
+  &-meta {
+    @include flexbox(center);
+    border-top: 1px solid $border-color;
+    padding-top: 2rem;
+  }
+  &-meta-item {
+    margin-right: 2rem;
+  }
+  &-meta-icon {
+    color: $third-color;
+    display: inline-block;
+    margin-right: 1rem;
+  }
+  &-meta-count {
+    color: $text-color;
+  }
+  @include maxWidth(1023px) {
+    padding: 5rem 0;
+    &-img {
+      @include size(100%, 16rem);
+    }
+    &-date {
+      padding: 1rem 1.5rem;
+    }
+    &-date-number {
+      font-size: 2rem;
+    }
+    &-date-text {
+      font-size: 1rem;
+    }
+    &-title {
+      margin-bottom: 1.5rem;
+    }
+    &-desc {
+      line-height: 1.4;
+      font-size: 1.4rem;
+    }
+  }
+  @include maxWidth(767px) {
+    &-list {
+      display: block;
+    }
+    &-item {
+      width: 100%;
+    }
+    &-item:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+  }
+}
+.map {
+  padding: 6rem 0;
+  background: linear-gradient(to bottom, rgba(white, 0.7), rgba(white, 0.6)),
+    url("../images/img-map.png") no-repeat center / cover;
+  &-content {
+    @include flexbox(center, center, column);
+  }
+  &-icon {
+    margin-bottom: 1.5rem;
+  }
+  &-heading {
+    position: relative;
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: $primary-color;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+    &::after {
+      content: "";
+      @include size(6.5rem, 4px);
+      @include bg($primary-color);
+      @include absoluteCenter();
+      bottom: 0;
+    }
+  }
+}

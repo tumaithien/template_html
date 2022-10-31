@@ -1,0 +1,36 @@
+.header {
+  display: block;
+  &-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+  }
+  &-phone {
+    color: $gray;
+    font-weight: 300;
+    span {
+      font-weight: 600;
+      margin-left: 15px;
+    }
+  }
+}
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 0 60px;
+}
+@include maxW(1023px) {
+  .header {
+    margin-bottom: 20px;
+  }
+  .header-main {
+    padding: 20px 0;
+  }
+  .header-phone {
+    display: none;
+  }
+  .navigation {
+    gap: 0 25px;
+  }
+}

@@ -2,7 +2,7 @@
   padding-top: 140px;
   &-list {
     display: grid;
-    grid-template-columns: repeat(3, minmax(275px, 1fr));
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
     column-gap: 50px;
   }
   &-item {
@@ -54,5 +54,18 @@
     width: 100%;
     max-width: 100%;
     word-break: break-word;
+  }
+  @include maxWidth(1279px) {
+    padding-top: 60px;
+    &-list {
+      column-gap: 25px;
+    }
+  }
+  @include maxWidth(1023px) {
+    &-list {
+      grid-template-columns: repeat(1, 340px);
+      row-gap: 30px;
+      justify-content: center;
+    }
   }
 }

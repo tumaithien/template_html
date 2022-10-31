@@ -1,0 +1,37 @@
+.blog {
+  padding: 150px 0;
+  display: block;
+  &-header {
+    max-width: 560px;
+    width: 100%;
+    margin: 0 auto 100px;
+    text-align: center;
+  }
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+  }
+  &-image {
+    margin-bottom: 30px;
+    display: block;
+  }
+  &-category {
+    color: $gray-light;
+  }
+  @include maxW(1023px) {
+    padding: 100px 0;
+    &-header {
+      margin-bottom: 50px;
+    }
+  }
+  @include maxW(767px) {
+    padding: 50px 0;
+    &-header {
+      margin-bottom: 30px;
+    }
+    &-list {
+      grid-template-columns: 1fr;
+    }
+  }
+}

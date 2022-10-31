@@ -86,4 +86,23 @@
     width: max-content;
     transition: all 0.2s linear;
   }
+  @include maxWidth(1279px) {
+    &-item {
+      width: calc(33.33% - 15px);
+    }
+  }
+  @include maxWidth(1023px) {
+    padding-bottom: 60px;
+    &-list {
+      flex-direction: column;
+    }
+    &-item {
+      padding: 40px 20px;
+      width: 350px;
+      margin: 0 auto;
+      &:not(:first-child) {
+        margin-top: 30px;
+      }
+    }
+  }
 }

@@ -69,4 +69,18 @@
       color: $yellow;
     }
   }
+  @include maxWidth(1279px) {
+    &-item:not(:first-child) {
+      margin-left: 35px;
+    }
+  }
+  @include maxWidth(767px) {
+    &-list {
+      flex-direction: column;
+    }
+    &-item:not(:first-child) {
+      margin-left: 0;
+      margin-top: 30px;
+    }
+  }
 }

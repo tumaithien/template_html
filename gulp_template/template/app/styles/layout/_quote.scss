@@ -1,0 +1,106 @@
+.quote {
+  @include bg($gray-color);
+  padding: 7rem 0;
+
+  &-arrow {
+    color: $gray-dark-color;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    font-size: 3rem;
+  }
+  &-item {
+    padding-left: 5.5rem;
+    padding-right: 5.5rem;
+    @include flexbox(center);
+  }
+  //Slick
+  .slick-initialized .slick-slide {
+    display: flex;
+  }
+  .slick-arrow {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: $gray-dark-color;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    font-size: 3rem;
+    @include absoluteCenter("top");
+    z-index: 10;
+  }
+  .slick-prev {
+    left: 0;
+  }
+  .slick-next {
+    right: 0;
+  }
+  &-icon {
+    @include size(15rem);
+    @include flexbox(center, center);
+    border: 3px solid $third-color;
+    flex-shrink: 0;
+    margin-right: 6rem;
+  }
+  // &-info {
+  //   padding-left: 6rem;
+  // }
+  &-desc {
+    font-family: $secondary-font;
+    font-size: 2.5rem;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    font-style: italic;
+    color: $text-color;
+    @include textClamp(3);
+  }
+  &-author {
+    font-family: $third-font;
+    font-size: 2.4rem;
+    position: relative;
+    padding-left: 7rem;
+    &::before {
+      @include absoluteCenter("top");
+      left: 0;
+      content: "";
+      @include size(6rem, 4px);
+      @include bg($primary-color);
+    }
+  }
+  &-image {
+    @include size(22rem);
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    margin-right: 2.5rem;
+  }
+  @include maxWidth(767px) {
+    &-arrow {
+      display: none;
+    }
+    &-item {
+      padding: 0;
+      flex-direction: column;
+    }
+    &-icon {
+      @include size(10rem);
+      margin-bottom: 1.5rem;
+      img {
+        max-width: 50%;
+      }
+    }
+    &-image {
+      margin-bottom: 1.5rem;
+      @include size(15rem);
+    }
+    &-info {
+      padding-left: 0;
+    }
+    &-desc {
+      display: block;
+      font-size: 1.6rem;
+    }
+    &-author {
+      font-size: 2rem;
+    }
+  }
+}

@@ -131,3 +131,21 @@ body {
 .logo {
   display: inline-block;
 }
+@include maxWidth(1023px) {
+  .block {
+    margin-bottom: 40px;
+    &-caption {
+      margin-bottom: 20px;
+    }
+  }
+}
+@include maxWidth(767px) {
+  .button {
+    padding: 15px 20px;
+  }
+  .block {
+    &-heading span {
+      display: unset;
+    }
+  }
+}

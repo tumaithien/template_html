@@ -25,3 +25,37 @@
     }
   }
 }
+@include maxWidth(1279px) {
+  .header {
+    .logo {
+      margin-right: 0;
+    }
+    &-menu {
+      margin: 0 auto;
+    }
+    &-auth {
+      margin-left: 0;
+      .button {
+        padding: 15px 20px;
+      }
+    }
+  }
+}
+@include maxWidth(1023px) {
+  .header {
+    &-menu {
+      display: none;
+    }
+    &-auth {
+      margin-left: auto;
+    }
+  }
+}
+@include maxWidth(767px) {
+  .header {
+    padding-top: 30px;
+  }
+  .logo {
+    max-width: 90px;
+  }
+}

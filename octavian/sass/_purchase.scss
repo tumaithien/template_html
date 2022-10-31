@@ -1,0 +1,54 @@
+.hero {
+  position: relative;
+  color: $gray-dark;
+  margin-bottom: 200px;
+  display: block;
+  &-img {
+    margin-left: auto;
+    max-width: 65%;
+  }
+  &-content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &-caption {
+    font-size: 72px;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  &-heading {
+    font-size: 150px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+  &-link {
+    font-size: 18px;
+    text-decoration: none;
+    color: $gray-light;
+    font-weight: 600;
+    display: inline-block;
+  }
+  @include maxW(1023px) {
+    margin-bottom: 100px;
+    &-caption {
+      font-size: 40px;
+    }
+    &-heading {
+      font-size: 100px;
+    }
+  }
+  @include maxW(767px) {
+    &-caption {
+      font-size: 20px;
+    }
+    &-heading {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+    &-img {
+      max-width: 75%;
+    }
+  }
+}

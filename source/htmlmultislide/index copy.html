@@ -1,0 +1,9 @@
+commands.push(function () {
+    $(document).ready(function () {
+        let $prevItem = $('.box-track-product.active').parent().prev();
+        do {
+            $prevItem.find('.box-track-product').addClass('active');
+            $prevItem = $prevItem.prev();
+        } while ($prevItem.length > 0);
+    });
+});

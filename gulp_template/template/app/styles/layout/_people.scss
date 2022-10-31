@@ -1,0 +1,65 @@
+.people {
+  padding: 10rem 0 5rem;
+  background: linear-gradient(to bottom, rgba(white, 0.7), rgba(white, 0.6)),
+    url("../images/img-people-bg.png") no-repeat center / cover;
+  &-list {
+    @include flexbox(stretch, space-between, row, flex, wrap);
+  }
+  &-item {
+    width: calc(50% - 20px);
+    @include flexbox(flex-start);
+    margin-bottom: 8rem;
+    padding-left: 4rem;
+  }
+  &-avatar {
+    @include size(11rem);
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 3rem;
+    flex-shrink: 0;
+  }
+  &-name {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.4rem;
+    @include textClamp(1);
+    margin-bottom: 1.5rem;
+  }
+  &-job {
+    position: relative;
+    padding-bottom: 2rem;
+    margin-bottom: 2.5rem;
+    display: block;
+    &::after {
+      content: "";
+      background-color: $primary-color;
+      @include size(6rem, 4px);
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+  }
+  &-desc {
+    line-height: 1.6;
+    @include textClamp(3);
+    color: $text-color;
+  }
+  @include maxWidth(1023px) {
+    padding: 5rem 0 2rem;
+    &-list {
+      display: block;
+    }
+    &-item {
+      width: 100%;
+      margin-bottom: 4rem;
+      padding-left: 0;
+    }
+    &-job {
+      padding-bottom: 2rem;
+      margin-bottom: 1.5rem;
+    }
+    &-avatar {
+      @include size(10rem);
+    }
+  }
+}
